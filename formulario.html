@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
+        <meta charset="UTF-8">
         <title>Aprendiendo javascript</title>
         <script src="prueba.js"></script>
     </head>
@@ -10,10 +11,11 @@
             <tr>
                 <td>
                     <h2>Indica tu nombre y apellidos</h2>
-                    <label for="nombre">Nombre</label><br>
+                    <label for="nombre" id="idNombre">Nombre</label><br>
                     <input type="text" id="nombre"><br>
-                    <label for="apellido">Apellidos</label><br>
+                    <label for="apellido" id="idApellido">Apellidos</label><br>
                     <input type="text" id="apellido"><br>
+                    <p id="final" style="color:red"></p>
                 </td>
             </tr>
             <tr>
@@ -24,7 +26,7 @@
                     <input type="radio" id="css" name="fav_lang" value="css">
                     <label for="css">CSS</label><br>
                     <input type="radio" id="javascript" name="fav_lang" value="javascript">
-                    <label for="css">CSS</label>
+                    <label for="css">JAVASCRIPT</label>
                 </td>
             </tr>
             <tr>
@@ -42,6 +44,5 @@
         </form>
         <br>
         <button type="button" onclick="validarForm()">Subir</button>
-        <p id="final"></p>
     </body>
 </html>
