@@ -7,7 +7,6 @@ function validarForm(){
     let elementoActivo = document.querySelector('input[name="fav_lang"]:checked');
     if(!elementoActivo) {
         document.getElementById("lengFav").innerHTML=("Selecciona una opción");
-        //alert('Selecciona una opción'); 
     }
 
     if(nombre.length == 0){
@@ -19,6 +18,13 @@ function validarForm(){
     } else {
         document.getElementById("datosPersonales").innerHTML=("Formulario validado");
         document.getElementById("datosPersonales").style.color="black";
-        formulario.reset();
+        checkboxes();
+        //formulario.reset();
     }
+}
+
+function checkboxes (){
+    let cb = document.querySelectorAll('input[name="vehiculo"]:checked');
+    
+    console.log(cb);
 }
