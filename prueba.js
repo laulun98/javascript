@@ -24,7 +24,15 @@ function validarForm(){
 }
 
 function checkboxes (){
-    let cb = document.querySelectorAll('input[name="vehiculo"]:checked');
-    
-    console.log(cb);
+    var vehiculos = document.getElementsByName("vehiculo");
+    let boton = document.getElementById("idBoton");
+
+    boton.addEventListener('click', function(){
+        vehiculos.forEach((e)=>{
+            if(e.checked==true){
+                console.log(e.value);
+            }
+        })
+    });
+
 }
