@@ -18,21 +18,7 @@ function validarForm(){
     } else {
         document.getElementById("datosPersonales").innerHTML=("Formulario validado");
         document.getElementById("datosPersonales").style.color="black";
-        checkboxes();
+        //checkboxes();
         //formulario.reset();
     }
-}
-
-function checkboxes (){
-    var vehiculos = document.getElementsByName("vehiculo");
-    let boton = document.getElementById("idBoton");
-
-    boton.addEventListener('click', function(){
-        vehiculos.forEach((e)=>{
-            if(e.checked==true){
-                console.log(e.value);
-            }
-        })
-    });
-
 }
