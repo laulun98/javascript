@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vue Basics</title>
+        <script src="http://unpkg.com/vue@3"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                
+            </div>
+        </nav>
+        <div id="content" class="container">
+            <h1>{{ pageTitle }}</h1>
+            <p>{{ content }}</p>
+        </div>
+        <script>
+            Vue.createApp({
+                data(){
+                    return{
+                        pageTitle: 'Hello, Vue!',
+                        content: 'Welcome to the wonderful world of Vue!'
+                    };
+                }
+            }).mount('#content');
+        </script>
+    </body>
+</html>
