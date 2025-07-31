@@ -37,39 +37,48 @@
                 <td>
                     <h2>Selecciona todas las opciones correctas</h2>
 
-                    <input type="checkbox" id="coche" name="vehiculo" value="coche">
+                    <input type="checkbox" id="coche" name="vehiculo" value="coche"  onclick="validarCoches()">
                     <label for="coche">Tengo un coche</label>
 
-                    <input type="checkbox" id="bici" name="vehiculo" value="bici">
+                    <input type="checkbox" id="bici" name="vehiculo" value="bici" onclick="validarBicis()">
                     <label for="bici">Tengo una bici</label>
 
-                    <input type="checkbox" id="avion" name="vehiculo" value="avion">
+                    <input type="checkbox" id="avion" name="vehiculo" value="avion" onclick="validarAvion()">
                     <label for="avion">Tengo un avion</label>
 
                     <p id="tipoVehiculo"></p>
                 </td>
             </tr>
             <tr>
-                <td>
-                    <h2 id="listaVehiculo">Escoge una opción</h2>
-                    <select id="listaCoches" style="display:none">
+                <td id="listaCoches" style="display:none">
+                    <h3>Marca de coche</h3>
+                    <select >
                         <option value="audi">Audi</option>
                         <option value="skoda">Skoda</option>
                         <option value="hyundai">Hyundai</option>
                     </select>
-                    <select id="listaBici" style="display:none">
+                </td>
+            </tr>
+            <tr>
+                <td id="listaBici" style="display:none">
+                    <h3>Tipo de bici</h3>
+                    <select>
                         <option value="manual">Manual</option>
                         <option value="electrica">Eléctrica</option>
                         <option value="montaña">De montaña</option>
                     </select>
-                    <select id="listaAvion" style="display:none">
+                </td>
+            </tr>
+            <tr>
+                <td id="listaAvion" style="display:none">
+                    <h3>Tipo de avión</h3>
+                    <select>
                         <option value="comercial">Comercial</option>
                         <option value="privado">Privado</option>
                         <option value="avioneta">Avioneta</option>
                     </select>
                 </td>
             </tr>
-
         </table>
         </form>
         <br>

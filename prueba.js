@@ -18,7 +18,36 @@ function validarForm(){
     } else {
         document.getElementById("datosPersonales").innerHTML=("Formulario validado");
         document.getElementById("datosPersonales").style.color="black";
-        //checkboxes();
-        //formulario.reset();
+    }
+}
+
+function validarCoches(){
+    let coches = document.getElementById("coche");
+    let listaCoches = document.getElementById("listaCoches");
+    if (coches.checked){
+        listaCoches.style.display="block";
+    } else {
+        listaCoches.style.display="none";
+    }
+}
+
+function validarBicis(){
+    let bicis = document.getElementById("bici");
+    let listaBicis = document.getElementById("listaBici");
+
+    if(bicis.checked){
+        listaBicis.style.display="block";
+    } else {
+        listaBicis.style.display="none";
+    }
+}
+
+function validarAvion(){
+    let avion = document.getElementById("avion");
+    let listaAvion = document.getElementById("listaAvion");
+    if (avion.checked){
+        listaAvion.style.display="block";
+    } else {
+        listaAvion.style.display="none";
     }
 }
