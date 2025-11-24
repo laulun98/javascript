@@ -1,0 +1,64 @@
+<script>
+    function main(){
+        let contenedor=crearContenedor()
+        let principal=crearDiv(contenedor)
+        let secundario=crearDiv(contenedor)
+        divLetras(principal);
+        divOpciones(principal, secundario);
+    }
+
+    function divOpciones(principal, secundario){
+        let final=botonesFunciones(principal);
+        final.addEventListener('click', añadirFinal(secundario))
+    }
+
+    function añadirFinal(secundario){
+        console.log("aaaa")
+    }
+
+    function botonesFunciones(principal){
+        let boton=document.createElement('button');
+        boton.innerText='Agregar al final';
+        boton.style.width='200px'
+        boton.style.marginTop='10px'
+        boton.style.marginBottom='10px'
+        principal.appendChild(boton);
+        return boton;
+    }
+
+    function divLetras(principal){
+        let letras=document.createElement('div')
+        letras.style.height='50px';
+        letras.style.width='200px';
+        letras.style.border='1px solid black';
+        principal.appendChild(letras)
+    }
+
+    function generarLetras(){
+        let letras = ['A','B','C','D','E','F','G','H','I','J','K','L'];
+    }
+
+    function crearContenedor(){
+        let contenedor=document.createElement('div');
+        contenedor.style.height='350px';
+        contenedor.style.width='400px';
+        //contenedor.style.border='1px solid black';
+        contenedor.style.display='flex';
+        contenedor.style.padding='10px';
+        contenedor.style.gap='10px'
+        contenedor.style.flexDirection='row';
+        document.body.appendChild(contenedor)
+        return contenedor;
+    }
+
+    function crearDiv(contenedor){
+        let div=document.createElement('div')
+        div.style.height='350px';
+        div.style.width='200px';
+        div.style.border='1px solid black';
+        contenedor.appendChild(div)
+        return div;
+    }
+
+    window.onload=main
+</script>
