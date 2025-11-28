@@ -1,0 +1,53 @@
+<script>
+    //CREAR CONTENEDORES
+    function main() {
+        let container = document.createElement("div");
+        container.style.width = '400px';
+        container.style.height = '400px';
+        document.body.appendChild(container);
+
+        let botonContainer = document.createElement("div");
+        botonContainer.style.width = '400px';
+        botonContainer.style.height = '30px'
+        //botonContainer.style.border = '1px solid black'
+        container.appendChild(botonContainer);
+
+        let botonUp = boton('top', botonContainer)
+        botonUp.addEventListener('click', () => {
+            let nodosHijo = secondary.childNodes
+            if (nodosHijo) {
+                console.log(nodosHijo)
+                let prueba = document.createElement("p");
+                prueba.innerHTML = "Prueba nodos hijo"
+                secondary.insertBefore(prueba, nodosHijo[0])
+            }
+        })
+        
+        let botonDown = boton('bottom', botonContainer)
+
+        let secondary = document.createElement("div");
+        secondary.style.width = '400px';
+        secondary.style.height = '50px';
+        container.appendChild(secondary);
+
+        let titulo = document.createElement("h2");
+        titulo.innerHTML = "Prueba nodos"
+        secondary.appendChild(titulo)
+
+        if (titulo.parentNode) {
+            console.log("tiene nodo padre")
+        } else {
+            console.log("no tiene nodo padre")
+        }
+    }
+
+    function boton(text, botonContainer) {
+        let boton = document.createElement('button')
+        boton.style.margin = '5px'
+        boton.innerHTML = text
+        boton.id = text
+        botonContainer.appendChild(boton)
+        return boton
+    }
+    window.onload = main;
+</script>
