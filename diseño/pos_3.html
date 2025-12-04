@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Posicionamiento 3</title>
+    </head>
+    <body>
+        <div>
+            <div></div>
+            <div ></div>
+            <div></div>
+            <div class="sinBorde">
+                <p>Uno</p>
+                <p>Dos</p>
+            </div>
+        </div>
+    </body>
+    <style>
+        div:first-child{
+            max-width:400px;
+            float:left;
+        }
+        div>div{
+            border: 1px solid black;
+            height: 100px;
+            width: 100px;
+            position:relative;
+            float:inherit;
+            margin: 2px;
+            margin-bottom:20px;
+        }
+        .sinBorde{
+            border: none;
+            width:400px;
+        }
+        div>p{
+            border: 1px solid red;
+            max-width: 100%;
+            
+            margin: 1px;
+        }
+    </style>
+</html>

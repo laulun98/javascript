@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Posicionamiento</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <p>Aquí está <span>la</span> cabecera</p>
+        </div>
+        <div>
+            <p>Aquí está la cabecera</p>
+        </div>
+        <div class="enlaces">
+            <p style="float:left">Ir a la cabecera</p>
+            <p style="float:right">No ir a la cabecera</p>
+        </div>
+    </div>
+</body>
+<style>
+    div:first-child{
+        max-width:500px
+    }
+    p {
+        border: 1px solid red;
+    }
+    div>p>span {
+        border: 1px solid red;
+        margin: 10px
+    }
+    .enlaces {
+        color:blueviolet;
+    }
+</style>
+
+</html>
